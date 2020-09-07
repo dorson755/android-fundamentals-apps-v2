@@ -27,20 +27,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * This activity handles radio buttons for choosing a delivery method for an
- * order, a spinner for setting the label for a phone number, and EditText input
- * controls.
- */
+
 public class OrderActivity extends AppCompatActivity
         implements AdapterView.OnItemSelectedListener{
 
-    /**
-     * Sets the content view to activity_order, and gets the intent and its
-     * data. Also creates an array adapter and layout for a spinner.
-     *
-     * @param savedInstanceState Saved instance state bundle.
-     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +49,6 @@ public class OrderActivity extends AppCompatActivity
             spinner.setOnItemSelectedListener(this);
         }
 
-        // Create an ArrayAdapter using the string array and default spinner
         // layout.
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,

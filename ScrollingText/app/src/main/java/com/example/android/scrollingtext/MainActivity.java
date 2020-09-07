@@ -19,11 +19,9 @@ package com.example.android.scrollingtext;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-/**
- * This app displays a scrollable TextView (a magazine article).
- * All changes were made to the layout. No code changes.
- * The code below is part of the Empty Activity template.
- */
+
+//This app displays a scrollable TextView.
+
 
 public class MainActivity extends AppCompatActivity {
 

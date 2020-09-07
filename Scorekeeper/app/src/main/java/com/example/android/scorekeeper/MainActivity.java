@@ -24,22 +24,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-/***
- * Main Activity for the Scorekeeper app, which keeps score for any game
- * involving two teams. The user can increment or decrement the score
- * for each team using Button views.
- */
+
 public class MainActivity extends AppCompatActivity {
 
-    // Member variables for holding the score
     private int mScore1;
     private int mScore2;
 
-    // Member variables for the two score TextView elements
     private TextView mScoreText1;
     private TextView mScoreText2;
 
-    // Tags to be used as the keys in OnSavedInstanceState
     static final String STATE_SCORE_1 = "Team 1 Score";
     static final String STATE_SCORE_2 = "Team 2 Score";
 
@@ -48,11 +41,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Find the TextViews by ID
         mScoreText1 = findViewById(R.id.score_1);
         mScoreText2 = findViewById(R.id.score_2);
 
-        // Restores the scores if there is savedInstanceState.
         if (savedInstanceState != null) {
             mScore1 = savedInstanceState.getInt(STATE_SCORE_1);
             mScore2 = savedInstanceState.getInt(STATE_SCORE_2);

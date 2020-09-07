@@ -23,9 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
-/**
- * Broadcast receiver for the alarm, which delivers the notification.
- */
+
 public class AlarmReceiver extends BroadcastReceiver {
 
     private NotificationManager mNotificationManager;
@@ -35,26 +33,16 @@ public class AlarmReceiver extends BroadcastReceiver {
     private static final String PRIMARY_CHANNEL_ID =
             "primary_notification_channel";
 
-    /**
-     * Called when the BroadcastReceiver receives an Intent broadcast.
-     *
-     * @param context The Context in which the receiver is running.
-     * @param intent The Intent being received.
-     */
+
     @Override
     public void onReceive(Context context, Intent intent) {
         mNotificationManager = (NotificationManager)
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // Deliver the notification.
         deliverNotification(context);
     }
 
-    /**
-     * Builds and delivers the notification.
-     *
-     * @param context, activity context.
-     */
+    
     private void deliverNotification(Context context) {
         // Create the content intent for the notification, which launches
         // this activity
